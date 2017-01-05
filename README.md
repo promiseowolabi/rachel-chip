@@ -9,9 +9,9 @@ NOTE: CHIP has built-in wifi, wlan0 is used for network and internet connectivit
 Ensure you can connect remotely to chip via local network on wlan0. Use the nmtui utility to join a network.
 Setup rachel with the following commands:
 
-`apt-get update`
-`apt-get install -y python`
-`curl -fsS https://bitbucket.org/promiseowolabi/rachelchip/raw/f2d05020c05fd49a36d5e79938681c041a34e7dd/installer.py | python`
+apt-get update
+apt-get install -y python
+curl -fsS https://bitbucket.org/promiseowolabi/rachelchip/raw/f2d05020c05fd49a36d5e79938681c041a34e7dd/installer.py | python
 
 Please note that this will change the 'pi' user's password to: rachel
 
