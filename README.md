@@ -13,4 +13,4 @@ apt-get update
 
 apt-get install -y python
 
-curl -fsS https://bitbucket.org/promiseowolabi/rachelchip/raw/f2d05020c05fd49a36d5e79938681c041a34e7dd/installer.py | python
+curl -fsS https://github.com/promiseowolabi/rachel-chip/blob/master/installer.py | python
