@@ -126,7 +126,7 @@ if wifi_present() and args.install_wifi:
 	# udhcpd wasn't starting properly at boot (probably starting before interface was ready)
 	# for now we we just force it to restart after setting the interface
 	sudo("sh -c 'sed -i \"s/^exit 0//\" /etc/rc.local'") or die("Unable to remove exit from end of /etc/rc.local")
-	sudo("sh -c 'echo ifconfig wlan1 10.10.10.10 >> /etc/rc.local; echo service udhcpd restart >> /etc/rc.local;'") or die("Unable to setup udhcpd reset at boot.")
+	sudo("sh -c 'echo ifconfig wlan1 10.10.10.10 >> /etc/rc.local; echo service udhcpd restart >> /etc/rc.local; echo \"iptables-restore < /etc/iptables.ipv4.nat\" >> /etc/rc.local'") or die("Unable to setup udhcpd reset at boot.")
 	sudo("sh -c 'echo exit 0 >> /etc/rc.local'") or die("Unable to replace exit to end of /etc/rc.local")
 	#sudo("ifdown wlan0 && ifdown wlan1 && ifup wlan0 && ifup wlan1") or die("Unable to restart network interfaces.")
 
