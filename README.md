@@ -13,4 +13,4 @@ apt-get update
 
 apt-get install -y python
 
-curl -fsS https://github.com/promiseowolabi/rachel-chip/blob/master/installer.py | python
+curl -fsS https://raw.githubusercontent.com/promiseowolabi/rachel-chip/master/installer.py | python
